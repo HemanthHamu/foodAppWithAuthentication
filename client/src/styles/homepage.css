@@ -1,0 +1,30 @@
+.homepage-container{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+}
+header h1{
+    text-align: center;
+    color: #beff6c;
+}
+header button{
+    position: fixed;
+    right: 10px;
+    top: 20px;
+    background-color: #383737;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #beff6c;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    border: none;
+}

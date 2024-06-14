@@ -1,0 +1,11 @@
+#no-internet-connection{
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

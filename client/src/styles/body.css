@@ -1,0 +1,16 @@
+.body-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+.body-container input{
+    padding: 10px;
+    border: none;
+    background-color: black;
+    border-radius: 10px;
+    width: 20%;
+    color: #beff6c;
+    font-size: 25px;
+    margin: 100px auto;
+}
