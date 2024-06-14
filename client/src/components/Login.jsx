@@ -29,7 +29,6 @@ export default function Login() {
         return toast.error("Invalid email or password")
       }
       localStorage.setItem('currentUser',JSON.stringify(response))
-      console.log(JSON.stringify(response))
       navigate('/homepage')
   }
   return (
