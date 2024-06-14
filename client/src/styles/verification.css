@@ -1,15 +1,23 @@
 .verification-container{
-    background-color:#383737 ;
+    background-color:#000 ;
     width: 400px;
     padding: 10px;
     border-radius: 10px;
+    margin: 200px auto;
 }
 .verification-container h2{
     text-align: center;
+    color: #beff6c;
 }
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+}
+form label{
+    color: #beff6c;
+}
+form input{
+    background-color: #242424;
 }
