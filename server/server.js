@@ -93,24 +93,27 @@ app.post('/verificationcheck',async (req,res) => {
     }
 })
 //ROUTE FOR CHECKING LOGIN
-app.post('/logincheck',async(req,res) => {
-    try{
-    const {email,password} = req.body;
-    const findUserMail = await Userclass.findOne({email});
-    const comparePassword = await bcrypt.compare(password,findUserMail.password)
-    if(findUserMail && comparePassword){
-        const token = createCookie(findUserMail._id,res);
-        return res.status(200).json({message:"User Logged in",token})
+app.post('/logincheck', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const findUserMail = await Userclass.findOne({ email });
+        
+        if (findUserMail) {
+            const comparePassword = await bcrypt.compare(password, findUserMail.password);
+            if (comparePassword) {
+                const token = createCookie(findUserMail._id, res);
+                return res.status(200).json({ message: "User Logged in", token });
+            } else {
+                return res.status(401).json({ message: "Invalid email or password" });
+            }
+        } else {
+            return res.status(401).json({ message: "Invalid email or password" });
+        }
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: "Internal Server Error" });
     }
-    else{
-        return res.status(401).json({message:"Invalid email or password"})
-    }
-}
-catch(err){
-        console.log(err);
-        return res.status(500).json({error:"Internal Server Error"})
-    }
-})
+});
 //ROUTE FOR RESET PASSWORD
 app.post('/forgot-password',async(req,res) => {
     const {email,newPassword} = req.body;
