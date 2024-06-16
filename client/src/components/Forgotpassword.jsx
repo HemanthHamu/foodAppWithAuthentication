@@ -16,7 +16,7 @@ export default function Forgotpassword() {
         return toast.error("Every input field must have a value...")
       }
       try {
-        const response = await fetch('http://127.0.0.1:4010/forgot-password', {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/forgot-password`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

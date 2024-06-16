@@ -14,7 +14,7 @@ export default function Login() {
     if(userInput.email==="" || userInput.password===""){
         return toast.error("Every input field must have a value...")
       }
-      const callAPI = await fetch("http://127.0.0.1:4010/logincheck",{
+      const callAPI = await fetch(`${process.env.REACT_APP_API_URL}/logincheck`,{
         method:"POST",
         headers: {
           'Content-Type' : 'application/json'
