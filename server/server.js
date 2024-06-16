@@ -6,7 +6,7 @@ import nodemailer from 'nodemailer'
 import dotenv from 'dotenv';
 import createCookie from './cookie/createCookie.js';
 import bcrypt from 'bcrypt'
-const port = 4010;
+const port = process.env.PORT || 4010;
 dotenv.config()
 const app = express();
 //MIDDLEWARES
