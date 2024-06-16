@@ -16,7 +16,7 @@ export default function () {
     }, [recipe]);
   return (
     <div className='body-container'>
-        <input type="text" value={recipe} onChange={(e) => setRecipe(e.target.value)}  />
+        <input type="text" value={recipe} onChange={(e) => setRecipe(e.target.value)} autoFocus />
         <Foodlist userInput={userInput} />
     </div>
   )

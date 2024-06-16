@@ -14,3 +14,16 @@
     font-size: 25px;
     margin: 100px auto;
 }
+
+@media (max-width:768px) {
+    .body-container{
+        width: 90%;
+        margin: auto;
+    }
+    .body-container input{
+        width: 80%;
+        background-color: #fff;
+        color: #000;
+    }
+    
+}

@@ -2,12 +2,11 @@
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
   justify-content: center;
 } 
 .register-container{
-    width: 500px;
+    width: 40%;
     padding: 30px;
     border-radius: 10px;
     background-color: black;
@@ -61,4 +60,10 @@ form button:hover{
 }
 form button:active{
     transform: scale(0.7);
+}
+
+@media (max-width:768px) {
+    .register-container{
+        width: 90%;
+    }
 }
