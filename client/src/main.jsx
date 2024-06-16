@@ -4,6 +4,8 @@ import App from './App.jsx'
 import {BrowserRouter} from 'react-router-dom';
 import { AuthContextProvider } from './context/AuthContext.jsx';
 import './index.css'
+import dotenv from 'dotenv'
+dotenv.config()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
